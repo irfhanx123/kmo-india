@@ -1,0 +1,162 @@
+
+			<div class="container5" style="background-color: #e0dfdc;">
+				<div class="post">
+					<div class="text"> Thanks for rating us!</div>
+					<div class="edit" >Edit</div>
+				</div>
+				<div class="star-widget">
+					<input type="radio"  name="rate" id="rate-5">
+				<label for="rate-5" class="fa fa-star"></label>
+				<input type="radio"  name="rate" id="rate-4">
+				<label for="rate-4" class="fa fa-star"></label>
+				<input type="radio"  name="rate" id="rate-3">
+				<label for="rate-3" class="fa fa-star"></label>
+				<input type="radio"  name="rate" id="rate-2">
+				<label for="rate-2" class="fa fa-star"></label>
+				<input type="radio"  name="rate" id="rate-1">
+				<label for="rate-1"  class="fa fa-star"></label>
+				<form action="#">
+					<header></header>
+					<div class="textarea">
+						<textarea name="" id="" cols="30" placeholder="describe your experience..." rows="10"></textarea>
+					</div>
+					<div class="btn7">
+						<button type="submit"> post</button>
+					</div>
+				</form>
+
+				</div>
+				
+<script>
+	const btn7 = document.querySelector(".button");
+	const post = document.querySelector(".post");
+	const widget = document.querySelector(".star-widget");
+	const editbtn = document.querySelector(".edit");
+	btn.onclick = ()=>{
+		widget.style.display - "none";
+		post.style.display - "block";
+		editBtn.onclick = ()=>{
+			widget.style.display - "block";
+		post.style.display - "none";
+		
+		}
+		return false;
+	}
+</script>
+			</div>
+
+            css
+
+            .container5{
+                position: relative;
+                width: 400px;
+                background:#e0dfdc;
+                padding: 20px 30px;
+                border: 1px solid#e0dfdc;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .container5 .post{
+                display: none;
+            
+            }
+            .container5 .edit{
+                position: absolute;
+                right: 10px;
+                top: 5px;
+                font-size: 16px;
+                color: #666;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            .container5 .edit:hover{
+                text-decoration: underline;
+            }
+            .container5 .star-widget input{
+                display: none;
+            }
+            .star-widget label{
+                font-size: 40px;
+                color: #fafaf8;
+                padding: 10px;
+                float: right;
+                transition: all 0.2s ease;
+            }
+             input:not(:checked)~label:hover,
+             input:not(:checked)~label:hover~{
+                color: #fd4;
+            }
+            input #rate-5:checked ~ label{
+                color: #fe7 ;
+                text-shadow: 0 0 20px #952;
+            }
+            #rate-1:checked ~ form header::before{
+             content: "i don't like it";
+            }
+            #rate-2:checked ~ form header::before{
+                content: "i like it";
+            }
+            #rate-3:checked ~ form header::before{
+                content: "they are awsome workers";
+            }
+            #rate-4:checked ~ form header::before{
+                content: "this company is excellent";
+            }
+            #rate-5:checked ~ form header::before{
+                content: "i got the great result from here";
+            }
+            .container5 form{
+                display: none;
+            }
+            input:checked ~ form{
+                display: block;
+            }
+            form header{
+                width: 100%;
+                font-size: 50px;
+                color: #f59d05;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 500;
+                margin: 5px 0 20px 0;
+                text-align: center;
+                transition: all 0.2s ease;
+            }
+            
+            form .textarea{
+                height: 100px;
+                width: 100%;
+                overflow: hidden;
+            }
+            form .textarea textarea{
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border: 1px solid #3d3d3d;
+                background: #f1f0f0;
+                padding: 10px;
+                font-size: 17px;
+                resize: none;
+            }
+            form .btn7{
+                height: 45px;
+                width: 100%;
+                margin: 15px 0;
+            }
+            form .btn7 button{
+                height: 100%;
+                width: 100%;
+                border: 1px solid #4b4b4b;
+                outline: none;
+                background: #e4e2e2;
+                font-size: 17px;
+                font-weight: 500;
+                text-transform: uppercase;
+                cursor: pointer;
+            
+            }
+            form .btn7 button:hover{
+                background: #1b1b1b;
+            }
